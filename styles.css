@@ -15,11 +15,12 @@ body {
 }
 
 .cards-container {
+    --cards-gap: 24px;
     display: flex;
     flex-direction: row;
-    gap: 24px;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--cards-gap);
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -27,8 +28,8 @@ body {
     background-color: #f2f1ed;
     border-radius: 12px;
     padding: 40px 32px;
-    width: 320px;
-    flex-shrink: 0;
+    flex: 0 0 calc(50% - var(--cards-gap) / 2);
+    max-width: calc(50% - var(--cards-gap) / 2);
 }
 
 .card-title {
