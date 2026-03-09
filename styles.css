@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f4f5f7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,37 +22,62 @@ body {
     gap: var(--cards-gap);
     justify-content: flex-start;
     align-items: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .card {
     background-color: #f2f1ed;
-    border-radius: 12px;
-    padding: 40px 32px;
-    flex: 0 0 calc(50% - var(--cards-gap) / 2);
-    max-width: calc(50% - var(--cards-gap) / 2);
+    border-radius: 4px;
+    padding: 16px;
+    min-width: 280px;
+    max-width: 320px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc((100% - 2 * var(--cards-gap)) / 3);
+}
+
+.card-top {
+    flex: 1;
 }
 
 .card-title {
-    font-size: 32px;
-    font-weight: 600;
-    color: #333;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #26251e;
     margin-bottom: 8px;
 }
 
 .card-price {
-    font-size: 20px;
-    color: #666;
+    font-size: 22px;
+    color: rgba(38, 37, 30, 0.5);
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.card-price-amount {
+    font-size: 22px;
+    color: rgba(38, 37, 30, 0.5);
+    font-weight: 400;
     margin-bottom: 24px;
 }
 
+.card-price-frequency {
+    font-size: 14px;
+    color: rgba(38, 37, 30, 0.5);
+    margin-bottom: 24px;
+}
 .card-content {
     margin-bottom: 32px;
 }
 
 .includes-text {
     font-size: 16px;
-    color: #333;
-    margin-bottom: 16px;
+    color: #26251e;
+    margin: 16px 0px;
 }
 
 .features-list {
@@ -63,20 +88,21 @@ body {
 .features-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #26251e;
 }
 
 .checkmark {
-    color: #4a4a4a;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: bold;
+    color: #26251e;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: regular;
 }
 
 .download-button {
     width: fit-content;
+    margin-top: auto;
     background-color: #e6e5e0;
     border: none;
     border-radius: 999px;
